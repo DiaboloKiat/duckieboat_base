@@ -8,33 +8,26 @@ git checkout master
 echo "Enter your message:"
 read message
 
-BRANCH=master
-if [ ! -z "$1" ]
-then
-    echo "operator on branch: $1"
-    BRANCH=$1
-fi
-
-echo "project:"
-read project
-
-if [ "$project" = "base" ]
+if [ "$1" = "base" ]
 then
     PROJECT=~/duckieboat_ros
-elif [ "$project" = "project_seadrone" ]
+elif [ "$1" = "project_seadrone" ]
 then
     PROJECT=~/project_seadrone/catkin_ws/src/duckieboat_ros
 else
-    echo "Input error"
-    cd ~/duckieboat_ros
+    echo "Please enter your project"
     return 0
 fi
 
+BRANCH=master
 echo "---------------------------------------------------------------------------------------------------"
-source $PROJECT/github/git_pull.sh $BRANCH
+source $PROJECT/github/git_branch.sh $1
+echo "---------------------------------------------------------------------------------------------------"
+source $PROJECT/github/git_pull.sh $1
 
 PULLSTAT=$?
-if [ "$PULLSTAT" -gt 0 ] ; then
+if [ "$PULLSTAT" -gt 0 ]
+then
     echo "There is conflict. Aborting"
     cd $PROJECT
     return
