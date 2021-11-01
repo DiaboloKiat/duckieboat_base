@@ -6,3 +6,7 @@
 	path = msgs/rosserial
 	url = git@github.com:ros-drivers/rosserial.git
 	ignore = dirty
+[submodule "msgs/nmea_msgs"]
+	path = msgs/nmea_msgs
+	url = git@github.com:ros-drivers/nmea_msgs.git
+	ignore = dirty
