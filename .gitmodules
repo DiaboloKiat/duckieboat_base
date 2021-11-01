@@ -1,8 +1,12 @@
-[submodule "sensors/gps/nmea_msgs"]
-	path = sensors/gps/nmea_msgs
+[submodule "msgs/nmea_msgs"]
+	path = msgs/nmea_msgs
 	url = git@github.com:ros-drivers/nmea_msgs.git
 	ignore = dirty
 [submodule "sensors/gps/nmea_navsat_driver"]
 	path = sensors/gps/nmea_navsat_driver
 	url = git@github.com:ros-drivers/nmea_navsat_driver.git
+	ignore = dirty
+[submodule "msgs/rosserial"]
+	path = msgs/rosserial
+	url = git@github.com:ros-drivers/rosserial.git
 	ignore = dirty

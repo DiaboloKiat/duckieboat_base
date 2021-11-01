@@ -18,11 +18,14 @@ cd ~/$PROJECT
 git checkout master
 
 ############################## submodules ####################################
-cd ~/$PROJECT/sensors/gps/nmea_msgs
+cd ~/$PROJECT/msgs/nmea_msgs
 git checkout master
 
 cd ~/$PROJECT/sensors/gps/nmea_navsat_driver
 git checkout master
+
+cd ~/$PROJECT/msgs/rosserial
+git checkout melodic-devel
 
 ##############################################################################
 

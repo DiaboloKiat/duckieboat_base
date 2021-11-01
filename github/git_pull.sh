@@ -58,6 +58,21 @@ then
    return 1
 fi
 
+BRANCH=melodic-devel
+echo "---------------------------------------------------------------------------------------------------"
+echo "-----------------------------------------pull rosserial--------------------------------------------"
+echo "---------------------------------------------------------------------------------------------------"
+cd ~/$PROJECT/msgs/rosserial
+git checkout $BRANCH
+git pull
+
+CONFLICTS=$(git ls-files -u | wc -l)
+if [ "$CONFLICTS" -gt 0 ]
+then
+   echo "There is conflict in rosserial. Aborting"
+   return 1
+fi
+
 
 
 cd ~/$REPO
