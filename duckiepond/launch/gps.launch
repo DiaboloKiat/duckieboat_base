@@ -1,0 +1,12 @@
+<launch>
+    <arg name="veh"/>
+    <arg name="gps_port" default="/dev/ttyUSB0" />
+    <arg name="gps_baud" default="4800" />
+    
+    <group ns="$(arg veh)">
+        <node pkg="nmea_navsat_driver" type="nmea_serial_driver.py" name="nmea_serial_driver" output="screen">
+            <param name="~port" value="$(arg gps_port)" />
+            <param name="~baud" value="$(arg gps_baud)" />
+        </node>
+    </group>
+</launch>

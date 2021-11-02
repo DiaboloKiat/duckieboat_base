@@ -1,0 +1,14 @@
+<launch>
+    <arg name="veh"/>
+    <arg name="sim" default="false" />
+
+    <group ns="$(arg veh)">
+        <node pkg="control" type="pid_control_x1.py" name="PID_control_x1" output="screen" >
+            <param name="sim" value="$(arg sim)"/> 
+        </node>
+        <node pkg="control" type="multipoint.py" name="multi_waypoint" output="screen" >
+            <param name="sim" value="$(arg sim)"/> 
+        </node>
+    </group>
+
+</launch>
