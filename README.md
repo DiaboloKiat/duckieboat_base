@@ -11,4 +11,3 @@ This is a robot repo for duckieboat, including ros package for
 - localization
     - localization
     - mocap localization
-- 
