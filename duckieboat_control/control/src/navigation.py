@@ -16,7 +16,7 @@ import rospkg
 from cv_bridge import CvBridge, CvBridgeError
 from dynamic_reconfigure.server import Server
 from control.cfg import pos_PIDConfig, ang_PIDConfig, lookaheadConfig
-from duckiepond.msg import MotorCmd
+from duckieboat_msgs.msg import MotorCmd
 from std_srvs.srv import SetBool, SetBoolResponse
 
 from PID import PID_control

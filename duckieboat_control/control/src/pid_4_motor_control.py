@@ -14,7 +14,7 @@ from nav_msgs.msg import OccupancyGrid, MapMetaData, Odometry
 import rospkg
 from dynamic_reconfigure.server import Server
 from control.cfg import pos_PIDConfig, ang_PIDConfig
-from duckiepond.msg import VelocityVector
+from duckieboat_msgs.msg import VelocityVector
 from std_srvs.srv import SetBool, SetBoolResponse
 
 from PID import PID_control

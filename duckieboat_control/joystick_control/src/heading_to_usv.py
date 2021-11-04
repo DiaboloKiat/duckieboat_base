@@ -2,7 +2,7 @@
 import rospy
 import math
 
-from duckiepond.msg import Heading
+from duckieboat_msgs.msg import Heading
 from duckiepond_vehicle.msg import UsvDrive
 
 class MotorCmd(object):

@@ -4,7 +4,7 @@ import math
 import numpy as np
 import tf
 from sensor_msgs.msg import Joy,Imu
-from duckiepond.msg import Motor4Cmd,VelocityVector
+from duckieboat_msgs.msg import Motor4Cmd,VelocityVector
 from dynamic_reconfigure.server import Server
 from control.cfg import ang_PIDConfig
 from PID import PID_control

@@ -3,7 +3,7 @@ import rospy
 import math
 
 from sensor_msgs.msg import Joy
-from duckiepond.msg import Heading
+from duckieboat_msgs.msg import Heading
 
 class JoyMapper(object):
     def __init__(self):

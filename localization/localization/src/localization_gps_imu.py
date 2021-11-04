@@ -13,7 +13,7 @@ from std_msgs.msg import Float64
 from std_msgs.msg import String
 from message_filters import ApproximateTimeSynchronizer, TimeSynchronizer
 from std_srvs.srv import EmptyRequest, EmptyResponse, Empty
-from duckiepond.srv import SetValue, SetValueRequest, SetValueResponse
+from duckieboat_msgs.srv import SetValue, SetValueRequest, SetValueResponse
 import message_filters
 
 from geodesy.utm import UTMPoint, fromLatLong

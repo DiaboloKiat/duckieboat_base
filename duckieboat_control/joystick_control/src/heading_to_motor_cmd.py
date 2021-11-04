@@ -2,7 +2,7 @@
 import rospy
 import math
 
-from duckiepond.msg import MotorCmd,Heading
+from duckieboat_msgs.msg import MotorCmd,Heading
 
 class Commander(object):
     def __init__(self):

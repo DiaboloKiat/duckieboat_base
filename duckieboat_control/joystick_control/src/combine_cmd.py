@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from duckiepond.msg import MotorCmd
+from duckieboat_msgs.msg import MotorCmd
 from std_msgs.msg import Header,Float64
 import math
 
