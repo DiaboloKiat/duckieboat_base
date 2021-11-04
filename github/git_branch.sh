@@ -2,11 +2,11 @@
 
 if [ "$1" = "base" ]
 then
-    PROJECT=duckieboat_ros
-    REPO=duckieboat_ros
+    PROJECT=duckieboat_base
+    REPO=duckieboat_base
 elif [ "$1" = "project_seadrone" ]
 then
-    PROJECT=project_seadrone/catkin_ws/src/duckieboat_ros
+    PROJECT=project_seadrone/catkin_ws/src/duckieboat_base
     REPO=project_seadrone
 else
     echo "Please enter your project"

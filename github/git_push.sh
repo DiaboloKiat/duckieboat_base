@@ -10,11 +10,11 @@ read message
 
 if [ "$1" = "base" ]
 then
-    PROJECT=duckieboat_ros
-    REPO=duckieboat_ros
+    PROJECT=duckieboat_base
+    REPO=duckieboat_base
 elif [ "$1" = "project_seadrone" ]
 then
-    PROJECT=project_seadrone/catkin_ws/src/duckieboat_ros
+    PROJECT=project_seadrone/catkin_ws/src/duckieboat_base
     REPO=project_seadrone
 else
     echo "Please enter your project"
@@ -42,11 +42,11 @@ echo "--------------------------------------------------------------------------
 # push master
 
 echo "---------------------------------------------------------------------------------------------------"
-echo "------------------------------------------push duckieboat_ros--------------------------------------"
+echo "------------------------------------------push duckieboat_base-------------------------------------"
 echo "---------------------------------------------------------------------------------------------------"
 cd ~/$PROJECT
 git add -A
-git commit -m "${message} on duckieboat_ros"
+git commit -m "${message} on duckieboat_base"
 git push
 
 cd ~/$REPO

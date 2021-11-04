@@ -2,11 +2,11 @@
 
 if [ "$1" = "base" ]
 then
-    PROJECT=duckieboat_ros
-    REPO=duckieboat_ros
+    PROJECT=duckieboat_base
+    REPO=duckieboat_base
 elif [ "$1" = "project_seadrone" ]
 then
-    PROJECT=project_seadrone/catkin_ws/src/duckieboat_ros
+    PROJECT=project_seadrone/catkin_ws/src/duckieboat_base
     REPO=project_seadrone
 else
     echo "Please enter your project"
@@ -15,7 +15,7 @@ fi
 
 BRANCH=master
 echo "---------------------------------------------------------------------------------------------------"
-echo "---------------------------------------pull duckieboat_ros-----------------------------------------"
+echo "---------------------------------------pull duckieboat_base----------------------------------------"
 echo "---------------------------------------------------------------------------------------------------"
 cd ~/$PROJECT
 git checkout $BRANCH
@@ -24,7 +24,7 @@ git pull
 CONFLICTS=$(git ls-files -u | wc -l)
 if [ "$CONFLICTS" -gt 0 ]
 then
-   echo "There is conflict in duckieboat_ros. Aborting"
+   echo "There is conflict in duckieboat_base. Aborting"
    return 1
 fi
 
